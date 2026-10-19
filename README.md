@@ -3,10 +3,10 @@ Code for EV228: Analysis of Environmental Data at Colorado College.
 
 ## Code Index
 Code is in the root directory. Unless otherwise specified, all code is in Python.
-* count_outcomes: Count and display outcomes for a virtual dice roller
-* fun_probability: functions relating to probability tasks
-* utensils_fun_demo: utensils demonstration written in functions
-* utensils_script_demo: utensils demonstration written as a script
+* `count_outcomes`: Count and display outcomes for a virtual dice roller
+* `fun_probability`: functions relating to probability tasks
+* `utensils_fun_demo`: utensils demonstration written in functions
+* `utensils_script_demo`: utensils demonstration written as a script
 
 ## Reading Index
 Readings are in the `reading` subdirectory. Unless otherwise specified, all readings are written in Markdown.
