@@ -16,7 +16,7 @@ We will go over all of these processes in our initial meeting on Day 1.
 ## 1. Coding in an Integrated Development Environment (IDE)
 * An IDE is software that provides a comprehensive environment to carry out software development: that is, to write, run, and test code.
 * Examples of IDEs:
-    * VSCode -- this is the one we use
+    * VSCode -- this is the one we use in EV228
     * Zed
     * Spyder
     * PyCharm
@@ -32,7 +32,7 @@ We will go over all of these processes in our initial meeting on Day 1.
 
 ### 1.2. Running code
 * Python code is run from the shell using the command `python [name of file.py]`
-  * For example, a Python program named `make_cookies.py` would be run from the shell by entering the command `python make_cookies.py`
+  * For example, we ran our `utensils_script_demo.py` Python program on Day 1 by entering the command `python utensils_script_demo.py` into the shell
 * The output from the code is printed to the Terminal
 
 ### 1.3. Example: Writing and running code
@@ -44,6 +44,12 @@ We will go over all of these processes in our initial meeting on Day 1.
 * This should yield the output: "Hello world!"
 
 *Link to video: [link](https://drive.google.com/file/d/1woTGqYPr772jzUVwURcVUfkdXtcFDGPK/view?usp=drive_link). Screen recording of this example. Shell commands used to show that the working directory is the project folder.*
+
+#### 1.3.1 Printing and program state
+* In general, any variable can be printed by typing `print(variable)`.
+* In class, we often use a function called `ic()` from the package `icecream` to do this instead as it uses clearer formatting.
+* Printing variables is used to track the *program state*: the set of objects accessible to the program at a given moment.
+* Tracking the program state is critical to troubleshooting code as it is how we understand exactly where the program goes awry.
 
 ### 1.4. Stopping at a certain line
 * It is often useful to stop code from running past a certain point, especially when troubleshooting a longer program.
@@ -65,13 +71,14 @@ We will go over all of these processes in our initial meeting on Day 1.
 * Close current tab: ⌘ + W (Windows equivalent: Control + W)
 
 ### 1.6. A Note About Jupyter Notebooks
-**You can ignore this section if you never learned Jupyter Notebooks or if you have already worked with free-form Python code.** (For example, if you took my [EV228](https://github.com/dmhuehol/ev228-analysis-environmental-data) course.)
+**You can ignore this section if you never learned Jupyter Notebooks or if you have already worked with free-form Python code.**
 * Jupyter Notebooks provide a single script organized in "cells" consisting of either natural language (written in Markdown) or code (Python).
 * Most new Python learners (since ~2020) begin with Jupyter Notebooks, due to their ability to run cell by cell and the way that they hide certain complexities of the underlying Python installation.
 * Our approach of writing Python code free-form within an IDE may seem unintuitive if you are familiar with Jupyter Notebooks.
-* While Jupyter Notebooks are often useful in classroom education, in research and professional development they raise **three major challenges:**
+* Jupyter Notebooks are terrific in classroom situations where learning code is not the emphasis! I use Jupyter Notebooks extensively in EV128 "Introduction to Global Climate Change" and my First-Year Program version of this course.
+* However, in research and professional development they raise **three major challenges:**
     1. Notebooks encourage thinking about workflows as a single process, often with lots of repeated code. This usually yields inefficient code which is difficult for others (including your future self!) to reuse.
-    2. The cell-by-cell workflow of Notebooks make it difficult to reliably track the *program state* (the variables and names accessible to the program at any given moment). This makes troubleshooting challenging because edits made in one place interact unpredictably with other parts of the script. These errors are difficult to catch, particularly under deadline pressure. Meta-scientific analyses show that most Jupyter Notebooks in the published literature cannot run to completion because of bugs introduced by program state errors.
+    2. The cell-by-cell workflow of Notebooks make it difficult to reliably track the program state. This makes troubleshooting challenging because edits made in one place interact unpredictably with other parts of the script. These errors are difficult to catch, particularly under deadline pressure. Meta-scientific analyses show that most Jupyter Notebooks in the published literature cannot run to completion because of bugs introduced by program state errors!
     3. Most careers with a data science element in industry, the nonprofit sector, or government do not consider knowledge of Jupyter Notebooks alone to be sufficient experience for hiring.
 
 

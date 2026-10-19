@@ -31,6 +31,7 @@ Depending on your prior experience, much or all of this material may be review. 
 * A *path* uniquely describes the location of a file or folder within a sequence of other folders. The folders are separated by forward slashes ("/").
   * For example, `/Users/joharding/Data/toto_obs_19960510.dat` is a path to a file named `toto_obs_19960510.dat` located within the `Data` folder inside the `joharding` folder in the `Users` folder.
   * *Windows works differently:* On Windows, paths are separated by backslashes ("\\").
+  * The `*` symbol denotes a wildcard that will match any character. For example, `/Users/joharding/Data/toto*` denotes any file starting in `toto` located within the `Data` folder inside the `joharding` folder in the `Users` folder.
 * Your computer's *file system* organizes all of the data on your computer into different directories.
 * A folder within another folder is called a *subfolder* or *subdirectory*.
 * The *root directory* is the top folder in the file system: that is, all other folders are subfolders of the root directory.
@@ -44,12 +45,12 @@ Depending on your prior experience, much or all of this material may be review. 
 
 #### CL.2.1 - Navigating file structure
 ![finder-example](./images/finder-example.png)  
-*Example of a Finder window showing different folders. Each folder in the left column contains code and documentation for a different project. The files and folders for this coding-computers-edsg project is displayed in the right column. The full path for the folder is displayed at the bottom, with `>` symbols between the directories.*
+*Example of a Finder window showing different folders. Each folder in the left column contains code and documentation for a different project. The files and folders for a project named coding-computers-edsg is displayed in the right column. The full path for the folder is displayed at the bottom, with `>` symbols between the directories.*
 * On a Mac, use the Finder to browse your file system.
 * New folders can be created by selecting "New Folder" from the "File" menu within a Finder window.
 * *Windows works differently:* On Windows, the File Explorer is the program used to browse the file system. See Microsoft's documentation [here](https://support.microsoft.com/en-us/windows/file-explorer-in-windows-ef370130-1cca-9dc5-e0df-2f7416fe1cb1) for more information.
 ##### CL.2.1 Exercises
-* Create a folder called `Data` within your user directory on your lab computer, and take note of the path. **Use this to store data throughout your project.**
+* Create a folder called `Data` within your user directory on your computer, and take note of the path. **Use this to store data throughout the Block.**
 
 #### CL.2.2 - File formats
 * Files have a format that tells programs how to interact with them
@@ -70,18 +71,22 @@ Depending on your prior experience, much or all of this material may be review. 
 * There are many services that provide cloud storage, including: Google Drive, Apple iCloud, Microsoft OneDrive, and Proton Drive.
 * Google Drive is accessible through your web browser; see CL.4.
 * Cloud storage makes it easy to share files remotely and is hard to physically destroy: If campus is obliterated in a wildfire, for example, all of our local storage is gone but the cloud will be unaffected. However, cloud storage is slow to access relative to local storage, expensive in large amounts, and not reliably private (frequent concerns include: changes in legal terms, use for corporate language model training, government surveillance).
-##### CL.3.1 Exercises
-* Make a file on Google Drive (assuming you have a Google Drive account) and download it to a local location on your lab computer.  
-* Upload a file from your computer to the Google Drive.
 #### CL.3.2 - Saving
 * *Saving* a file refers to the process of storing a file at a location, or storing the changes to an already-existing file.
 * Unsaved changes are lost when the open program is closed--including if it is closed accidentally, or violently (e.g., a power surge, crash).
 * 🦆:heavy_exclamation_mark: Deliberately saving files is usually necessary when working locally. Online systems for consumers typically save changes automatically (e.g., Google Docs)--so it's important to get in the habit of saving manually!
+### CL.3.3 - Odd rules of file systems
+* File systems have many odd rules that can often trip up new users. Here are a few that are worth being aware of as you begin to intentionally choose file and folder names.
+* 🦆:heavy_exclamation_mark: Computers care a *lot* about exact filenames. `/Users/joharding/` and `/Users/johording/` look very similar to us, but are completely different to a computer. When you get an error while coding, it is often due to a small error in the command you entered.
+* 🦆:heavy_exclamation_mark: Due to intricacies of how computers developed over time, they retain many arcane rules for acceptable file and folder names. A few general rules that are often surprising: 
+  * File and folder names are case sensitive: that is, `/Users/Joharding/` is different from `/Users/joharding/`. For this reason, it is often recommended to use all lowercase letters in file and folder names.
+  * Space characters are almost never desirable in filenames. Use the `_` or `-` symbols instead of spaces. For example, instead of calling a folder `data analysis`, it should be named `data_analysis` or `data-analysis`. Otherwise, it may be difficult to access items within this folder later on.
+  * Never put a space at the end of a filename. For example, a folder name of `data ` should never be used; it should be named `data` instead. We often have a habit of putting a space at the end due to the presence of autocomplete on smartphones and tablets, where pressing the space key triggers the most likely suggestion. But extraneous space at the end of a folder often renders a path inaccessible when writing code.
 
 ### CL.4 - The Internet and information retrieval
 * The Web is the worldwide system for sharing information over the Internet.
 * Individual *pages* on a *website* are located at an *internet address*, analogous to how local files and folders are located at specific paths.
-   * For example, our `creator-computer-literacy` page is located on the website `github.com` accessible with the complete address `https://github.com/dmhuehol/coding-computers-edsg/blob/main/creator-computer-literacy.md`
+   * For example, our `creator-computer-literacy` page is located on the website `github.com` accessible with the complete address `https://github.com/dmhuehol/ev228-analysis-of-environmental-data/blob/main/coding-ide-iterating-github.md`
 * *Web browsers* allow you to visit different websites. Common web browsers are below.
    * [Firefox](https://www.firefox.com/en-US/)
    * [Google Chrome](https://www.google.com/chrome/)
@@ -137,6 +142,7 @@ Some other commands are also frequently useful:
    * `touch [path/filename]` -- make a new empty file called `[filename]` at the location specified by `[path]`
    * `cat [path/filename]` -- print the contents of `[filename]` at the location specified by `[path]`
    * `open [path/filename]` -- open the file called `[filename]` at the location specified by `[path]` using the system default program for that type of file
+   * `rm [filename]` -- "remove", deletes the file at `[filename]`. **WARNING: Deletions using `rm` cannot be undone. Use this carefully!**
 * 🦆:heavy_exclamation_mark: The shell is how we run Python code and is often necessary to download large datasets. This is the final step of the creator computer literacy: as a consumer, you will likely never interact with the shell!
 * *Windows works differently:* On Windows, the equivalent to the shell is called the "Command Line". While it may look similar, the underlying software and hardware engineering is *completely different*. This is a major reason why it is difficult to move code between Windows and Unix-based systems. Thus, it's best to choose just one to work in (although it is not impossible to work around this). For the reasons described in CL.5, most researchers (including myself) choose Unix-based systems.
    * If using Windows, watch [this video](https://www.youtube.com/watch?v=QBWX_4ho8D4) for a tutorial of using the Windows shell.
@@ -176,7 +182,7 @@ Search Wikimedia Commons for a cloud picture that you like. Save the photo to th
 The Applications folder is located within the root directory. Use the shell to navigate to this folder, and use `ls` to view all of the installed programs. Look up one program that you are not familiar with online to see what it does.
 
 #### CL.9.3 Text edit / Reading what is in front of you
-Open your terminal and navigate to the `test` folder in your `Data` folder. The command `nano [filename]` opens a simple text editor inside the command line. Use `nano` to open the blank `test.txt` file that you made in CL.6.1. Type any text that you want--I suggest "The five boxing wizards jump quickly." With `nano` open, the bottom of the screen will display shortcut keys for various commands. Use the shortcut for "Exit", then follow the prompt to "Save modified buffer" to save your changes. Use `cat` to print the change from your
+Open your terminal and navigate to the `test` folder in your `Data` folder. The command `nano [filename]` opens a simple text editor inside the command line. Use `nano` to open the blank `test.txt` file that you made in CL.6.1. Type any text that you want--I suggest "The five boxing wizards jump quickly." With `nano` open, the bottom of the screen will display shortcut keys for various commands. Use the shortcut for "Exit", then follow the prompt to "Save modified buffer" to save your changes. Use `cat` to print the change to your shell screen.
 
 ### Authorship and Acknowledgments
 This document was written by Daniel Hueholt.
