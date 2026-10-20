@@ -1,7 +1,7 @@
 # creator-computer-literacy
 In becoming a data science researcher, we shift from using computers as a *consumer* to using them as a *creator*. When you use a computer, tablet, or smartphone as a consumer, there are thousands of highly-trained (and highly-paid!) software engineers, designers, hardware engineers, and other professionals whose jobs are to keep you from encountering friction in the user experience.
 
-![xkcd 1349](./images/xkcd-1349.png)  
+![xkcd 1349](/images/xkcd-1349.png)  
 *Credit: [xkcd 1349](xkcd.com/1349/), licensed under a Creative Commons Attribution-NonCommercial 2.5 License.*
 
 When you use a computer as a creator, there is no longer anyone to protect you from the whims of the sand! Thus, learning *computer literacy skills*--fundamental knowledge about how computers operate and are structured--is a necessary first step.  
@@ -44,7 +44,7 @@ Depending on your prior experience, much or all of this material may be review. 
   * 🦆:heavy_exclamation_mark: This is very different than how consumer interactions with computers typically work: mobile/tablet apps (e.g., TikTok, Snapchat) rarely involve continuity in workflow and cloud systems (e.g., Google Drive) queue most recently used items.
 
 #### CL.2.1 - Navigating file structure
-![finder-example](./images/finder-example.png)  
+![finder-example](/images/finder-example.png)  
 *Example of a Finder window showing different folders. Each folder in the left column contains code and documentation for a different project. The files and folders for a project named coding-computers-edsg is displayed in the right column. The full path for the folder is displayed at the bottom, with `>` symbols between the directories.*
 * On a Mac, use the Finder to browse your file system.
 * New folders can be created by selecting "New Folder" from the "File" menu within a Finder window.
@@ -94,7 +94,7 @@ Depending on your prior experience, much or all of this material may be review. 
    * [Safari](https://www.apple.com/safari/) - included by default on Macs
    * [Vivaldi](https://vivaldi.com)
 * You can visit a specific website by typing its address into the address bar in your web browser. An example is shown below.
-![address-bar](./images/address-bar.png)  
+![address-bar](/images/address-bar.png)  
 *Example of a Web browser (Vivaldi) open to a specific website--here, the National Hurricane Center. The address is the highlighted text at the top of the screen inside the address bar.*
 * *Search engines* refer to tools that are designed for retrieving information on the Web related to a specific query. Search engines usually return a block of synthetic text ("AI Overview") generated in response to your query followed by a list of links to websites with relevant information. Common search engines are below. Search engines marked with the 🐈‍⬛ symbol allow the synthetic text response to be disabled.
    *  [Google](https://www.google.com)
