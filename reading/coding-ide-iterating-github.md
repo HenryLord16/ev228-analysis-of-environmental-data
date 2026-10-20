@@ -10,8 +10,8 @@ These materials assume:
 * You have downloaded VSCode
 * You have a GitHub account
 * You have GitHub Desktop installed on your computer
-* GitHub is already set up with a repository for your onboarding project.
-We will go over all of these processes in our initial meeting on Day 1.
+* GitHub is already set up with a repository for your class work.
+We will go over all of these processes in our initial meeting on Setup Day.
 
 ## 1. Coding in an Integrated Development Environment (IDE)
 * An IDE is software that provides a comprehensive environment to carry out software development: that is, to write, run, and test code.
