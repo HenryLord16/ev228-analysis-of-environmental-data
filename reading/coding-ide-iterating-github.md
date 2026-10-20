@@ -27,7 +27,7 @@ We will go over all of these processes in our initial meeting on Setup Day.
 
 ### 1.1. VSCode
 * There are three main panels in the VSCode window. The figure below describes this layout.
-![vscode-window](images/vscode-window.jpeg)
+![vscode-window](/images/vscode-window.jpeg)
 *Example VSCode window showing the Editor, Explorer, and Terminal.*
 
 ### 1.2. Running code
@@ -103,7 +103,7 @@ We will go over all of these processes in our initial meeting on Setup Day.
     * This archives your changes such that you can go back later and check on what you've done--and revert changes if necessary. (Think of this as analogous to checkpoints in a video game.)
     * GitHub has many more complex features than this. Depending on what direction our work goes, we may explore some of these later in the project. But, these pieces of logging iterative changes by committing and pushing individual commits are sufficient for now.
 
-![git-github-theory](images/git-github-theory.jpeg)
+![git-github-theory](/images/git-github-theory.jpeg)
 *This schematic illustrates the relationship between the local project folder where you make changes, the local Git repository, and the remote repository hosted on GitHub. Saving (does not involve Git) saves changes within the project folder. Committing logs changes within the local repository (moves from project folder to local repository). Fetching checks whether the remote and local repositories are different. Pushing updates the remote repository to match the local repository (moves from local to remote repository). Pulling updates the local repository to match the remote repository (moves from remote to local repository).*
 
 #### 2.1.1. Why do we use Git?
@@ -122,7 +122,7 @@ We will go over all of these processes in our initial meeting on Setup Day.
 ### 2.2. Using GitHub Desktop to manage version control
 * GitHub Desktop manages all stages of version control: committing, fetching, pushing, pulling, etc.
 
-![github-desktop](images/github-desktop.jpeg)
+![github-desktop](/images/github-desktop.jpeg)
 *Example GitHub Desktop window showing major panels.*
 
 * The Changes panel displays all files in the project folder with changes from the previous commit
