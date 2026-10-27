@@ -14,26 +14,71 @@ def custom_mean(in_data):
     mean_num = sum_num / length_num
     return mean_num
 
-def descriptive_statistics(in_data, custom_q=None):
+def descriptive_statistics(in_data, axis=None, custom_q=None):
     ''' Calculate descriptive statistics for a list of numbers '''
-    dict_moments = {
-        "first": np.mean(in_data),
-        "second": np.var(in_data),
-        "third": stats.skew(in_data),
-        "fourth": stats.kurtosis(in_data),
-    }
-    dict_other = {
-        "median": np.quantile(in_data, 0.5),
-        "percentile_90": np.quantile(in_data, 0.9),
-        "percentile_10": np.quantile(in_data, 0.1),
-        "maximum": np.max(in_data),
-        "minimum": np.min(in_data),
-        "standard_deviation": np.std(in_data)
-    }
-    if custom_q is not None:
-        str_custom_percentile = str(np.round(custom_q * 100, 2))
-        dict_other["percentile_" + str_custom_percentile] = np.quantile(
-            in_data, custom_q)
+    if axis is None:
+        dict_moments = {
+            "first": np.mean(in_data),
+            "second": np.var(in_data),
+            "third": stats.skew(in_data),
+            "fourth": stats.kurtosis(in_data),
+        }
+        dict_other = {
+            "median": np.quantile(in_data, 0.5),
+            "percentile_90": np.quantile(in_data, 0.9),
+            "percentile_10": np.quantile(in_data, 0.1),
+            "maximum": np.max(in_data),
+            "minimum": np.min(in_data),
+            "standard_deviation": np.std(in_data)
+        }
+        if custom_q is not None:
+            str_custom_percentile = str(np.round(custom_q * 100, 2))
+            dict_other["percentile_" + str_custom_percentile] = np.quantile(
+                in_data, custom_q)
+    elif type(axis) == int:
+        dict_moments = {
+            "first": np.mean(in_data, axis=axis),
+            "second": np.var(in_data, axis=axis),
+            "third": stats.skew(in_data, axis=axis),
+            "fourth": stats.kurtosis(in_data, axis=axis),
+        }
+        dict_other = {
+            "median": np.quantile(in_data, 0.5, axis=axis),
+            "percentile_90": np.quantile(in_data, 0.9, axis=axis),
+            "percentile_10": np.quantile(in_data, 0.1, axis=axis),
+            "maximum": np.max(in_data, axis=axis),
+            "minimum": np.min(in_data, axis=axis),
+            "standard_deviation": np.std(in_data, axis=axis)
+        }
+        if custom_q is not None:
+            str_custom_percentile = str(np.round(custom_q * 100, 2))
+            dict_other["percentile_" + str_custom_percentile] = np.quantile(
+                in_data, custom_q, axis=axis)
+    elif axis == 'flat':
+        flat_data = np.ravel(in_data)
+        dict_moments = {
+            "first": np.mean(flat_data),
+            "second": np.var(flat_data),
+            "third": stats.skew(flat_data),
+            "fourth": stats.kurtosis(flat_data),
+        }
+        dict_other = {
+            "median": np.quantile(flat_data, 0.5),
+            "percentile_90": np.quantile(flat_data, 0.9),
+            "percentile_10": np.quantile(flat_data, 0.1),
+            "maximum": np.max(flat_data),
+            "minimum": np.min(flat_data),
+            "standard_deviation": np.std(flat_data)
+        }
+        if custom_q is not None:
+            str_custom_percentile = str(np.round(custom_q * 100, 2))
+            dict_other["percentile_" + str_custom_percentile] = np.quantile(
+                in_data, custom_q)
+    else:
+        raise ValueError()
+
+
+        
     return dict_moments, dict_other
 
 def plot_hist(
